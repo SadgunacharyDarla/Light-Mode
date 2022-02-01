@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-mode {
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+#navbar .logo-sec {
+    width: 30%;
+    float: left;
+}
+
+#navbar .list-sec {
+    width: 70%;
+    float: right;
+}
+
+#navbar .list-sec ul li {
+    float: left;
+    margin: 30px;
+    /* float: right; */
+}
+
+#navbar .list-sec ul li {
+    float: left;
+    margin: 30px;
+    color: var(--secondary-color);
+    /* float: right; */
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+
+/* Pre Loader style */
+.loadText{
+    font-family: Arial;
+    color:#000;
+	font-size: 30px;
+}
+.preloader{
+    background-color:#FFF;
+    height: 100%;
+	padding-top: 60px;
+	margin-left: -20px;
+	margin-top: -20px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+/* Pre Loader Styles Ends Here */

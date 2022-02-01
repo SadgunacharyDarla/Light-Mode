@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode Light Mode</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <!-- <div class="preloader" id="preloader">
+        <img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" class="img-responsive center-block">
+        <p class="text-center loadText">Loading...</p>
+    </div> -->
+
+    <!-- Preloader Close -->
+    
+    <nav>
+        <div id="navbar">
+            <div class="logo-sec">
+                <img src="assets/css/design-2-outstanding-logo.jpg" alt="" width="100%">
+            </div>
+            <div class="list-sec">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+                <img src="assets/dark theme icon/moon.png" alt="" id="icon" width="30px">
+            </div>
+        </div>
+    </nav>
+    <script>
+        var icon = document.getElementById("icon");
+        if (localStorage.getItem("theme") == null) {
+            localStorage.setItem("theme", "light");
+        }
+        let localData = localStorage.getItem("theme");
+        if (localData == "light") {
+            icon.src = "assets/dark theme icon/moon.png";
+            document.body.classList.remove("dark-mode");
+        }
+        else if (localData == "dark") {
+            icon.src = "assets/dark theme icon/sun.png";
+            document.body.classList.add("dark-mode");
+        }
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                icon.src = "assets/dark theme icon/sun.png";
+                localStorage.setItem("theme", "dark");
+            } else {
+                icon.src = "assets/dark theme icon/moon.png";
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+</body>
+</html>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Preloader script -->
+<!-- <script>
+    $(document).ready(function(){
+    setTimeout(function() {
+		$("#preloader").fadeOut();
+	},3000);
+});
+</script> -->
+<!-- Preloader script ends -->
